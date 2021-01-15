@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(ellipse farthest-side at 76% 77%, rgba(245, 228, 212, 0.25) 4%, rgba(255, 255, 255, 0) calc(4% + 1px)), radial-gradient(circle at 76% 40%, #fef6ec 4%, rgba(255, 255, 255, 0) 4.18%), linear-gradient(135deg, #ff0000 0%, #000036 100%), radial-gradient(ellipse at 28% 0%, #ffcfac 0%, rgba(98, 149, 144, 0.5) 100%), linear-gradient(180deg, #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%); background-blend-mode: normal, normal, screen, overlay, normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1140px;
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(40px);
+    border: solid 2px transparent;
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px  rgba(46, 54, 68, 0.03);
+}
+
+.container aside {
+    width: 30%;
+    padding: 40px;
+    background-color: #fef6ec;
+}
+
+.user-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.container aside h2 {
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.menu {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.item h4 {
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    transition: all .3s ease-in-out;
+    padding-bottom: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.item img {
+    width: 30px;
+    height: 30px;
+}
+
+.item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color:#000036;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all .3s linear;
+}
+
+.item:hover {
+    letter-spacing: 2px;
+}
+
+.item:hover:after {
+    transform: scaleX(1);
+}
+
+.promo {
+    margin-top: 20px;
+    padding: 10px;
+    font-size:16px;
+    color: #fff;
+    background: linear-gradient(120deg, #d6c8a2 60%, #a2758d);
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, .7);
+}
+
+.info {
+    width: 70%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.card {
+    width: 80%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, .3);
+    box-shadow:  inset 20px 20px 40px #eee,
+                inset -20px -20px 40px #ffffff;
+    border-radius: 20px;
+    transition: all .3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.desc {
+    width: 60%;
+}
+
+.desc h2 {
+    font-size: 20px;
+}
+
+.desc p {
+    font-size: 14px;
+    color:  rgba(0, 0, 0, 0.7);
+}
+
+.project-pic {
+    width: 30%;
+}
+
+.project-pic img {
+    width: 150px;
+    object-fit: cover;
+}
+
+footer {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 12px;
+    color: #001;
+}
+
+@media(max-width: 750px) {
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 100%;
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    .container aside {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .container aside img {
+        margin-left: 25%;
+    }
+
+    .menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .desc {
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-pic {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
